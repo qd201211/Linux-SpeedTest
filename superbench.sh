@@ -19,14 +19,14 @@ PLAIN='\033[0m'
 about() {
 	echo ""
 	echo " ========================================================= "
-	echo " \                 Superbench.sh  Script                 / "
-	echo " \       Basic system info, I/O test and speedtest       / "
+	echo " \                 Superbench.sh  测试脚本               / "
+	echo " \         系统基础信息, I/O 测试 以及 网络速度测试       / "
 	echo " \                   v1.0.1 (27 Mar 2020)                / "
-	echo " \                   Created by Oldking                  / "
-	echo " \                   rebuild by qd201211                 / "
+	echo " \                   代码由 Oldking 编写                 / "
+	echo " \              修改以及汉化由 qd201211 完成             / "
 	echo " ========================================================= "
 	echo ""
-	echo " Intro: https://www.oldking.net/350.html"
+	echo " 作者文章: https://www.oldking.net/350.html"
 	echo " Copyright (C) 2019 Oldking oooldking@gmail.com"
 	echo ""
 }
@@ -605,8 +605,8 @@ get_system_info() {
 
 print_intro() {
 	printf ' Superbench.sh -- https://www.oldking.net/350.html\n' | tee -a $log
-	printf " Mode  : \e${GREEN}%s\e${PLAIN}    Version : \e${GREEN}%s${PLAIN}\n" $mode_name 1.1.6 | tee -a $log
-	printf ' Usage : wget -qO- git.io/superbench.sh | bash\n' | tee -a $log
+	printf " 模式  : \e${GREEN}%s\e${PLAIN}    版本 : \e${GREEN}%s${PLAIN}\n" $mode_name 1.1.6 | tee -a $log
+	printf ' 使用 : wget -qO- git.io/superbench.sh | bash\n' | tee -a $log
 }
 
 sharetest() {
