@@ -21,8 +21,9 @@ about() {
 	echo " ========================================================= "
 	echo " \                 Superbench.sh  Script                 / "
 	echo " \       Basic system info, I/O test and speedtest       / "
-	echo " \                   v1.1.6 (25 Nov 2019)                / "
+	echo " \                   v1.0.1 (27 Mar 2020)                / "
 	echo " \                   Created by Oldking                  / "
+	echo " \                   rebuild by qd201211                / "
 	echo " ========================================================= "
 	echo ""
 	echo " Intro: https://www.oldking.net/350.html"
@@ -233,7 +234,7 @@ print_speedtest() {
 	printf "%-18s%-18s%-20s%-12s\n" " Node Name" "Upload Speed" "Download Speed" "Latency" | tee -a $log
     speed_test '' 'Speedtest.net'
     speed_fast_com
-    speed_test '27377' 'Beijing 5G   CT'
+    speed_test '27377' '北京 5G   CT'
     speed_test '26352' 'Nanjing 5G   CT'
     speed_test '17145' 'Hefei 5G     CT'
 	speed_test '27594' 'Guangzhou 5G CT'
