@@ -15,4 +15,4 @@
 
 修改的时候突然发现作者还有一个快速测试模式，默认就有三个节点：
 
-```wget -qO- --no-check-certificate https://raw.githubusercontent.com/qd201211/Linux-SpeedTest/master/superbench.sh | bash -fast```
+```wget -qO- --no-check-certificate https://raw.githubusercontent.com/qd201211/Linux-SpeedTest/master/superbench.sh | bash -s fast```
