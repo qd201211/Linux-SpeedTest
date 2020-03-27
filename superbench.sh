@@ -336,10 +336,10 @@ ip_info(){
 		city=${region}
 	fi
 
-	echo -e " ASN & ISP            : ${SKYBLUE}$asn, $isp${PLAIN}" | tee -a $log
-	echo -e " 机构         : ${YELLOW}$org${PLAIN}" | tee -a $log
-	echo -e " 地理位置             : ${SKYBLUE}$city, ${YELLOW}$country / $countryCode${PLAIN}" | tee -a $log
-	echo -e " 所在区域             : ${SKYBLUE}$region${PLAIN}" | tee -a $log
+	echo -e " ASN & ISP           : ${SKYBLUE}$asn, $isp${PLAIN}" | tee -a $log
+	echo -e " 机构                : ${YELLOW}$org${PLAIN}" | tee -a $log
+	echo -e " 地理位置            : ${SKYBLUE}$city, ${YELLOW}$country / $countryCode${PLAIN}" | tee -a $log
+	echo -e " 所在区域          : ${SKYBLUE}$region${PLAIN}" | tee -a $log
 }
 
 ip_info2(){
@@ -351,10 +351,10 @@ ip_info2(){
 	countryCode=$(curl -s https://ipapi.co/country/)
 	region=$(curl -s https://ipapi.co/region/)
 
-	echo -e " ASN & ISP            : ${SKYBLUE}$asn${PLAIN}" | tee -a $log
-	echo -e " 机构                 : ${SKYBLUE}$org${PLAIN}" | tee -a $log
-	echo -e " 地理位置             : ${SKYBLUE}$city, ${GREEN}$country / $countryCode${PLAIN}" | tee -a $log
-	echo -e " 所在区域             : ${SKYBLUE}$region${PLAIN}" | tee -a $log
+	echo -e " ASN & ISP           : ${SKYBLUE}$asn${PLAIN}" | tee -a $log
+	echo -e " 机构                : ${SKYBLUE}$org${PLAIN}" | tee -a $log
+	echo -e " 地理位置            : ${SKYBLUE}$city, ${GREEN}$country / $countryCode${PLAIN}" | tee -a $log
+	echo -e " 所在区域          : ${SKYBLUE}$region${PLAIN}" | tee -a $log
 }
 
 ip_info3(){
@@ -368,10 +368,10 @@ ip_info3(){
 	countryCode=$(python ip_info.py countryCode)
 	region=$(python ip_info.py regionName)
 
-	echo -e " ASN & ISP            : ${SKYBLUE}$asn, $isp${PLAIN}" | tee -a $log
-	echo -e " 机构                 : ${GREEN}$org${PLAIN}" | tee -a $log
-	echo -e " 地理位置             : ${SKYBLUE}$city, ${GREEN}$country / $countryCode${PLAIN}" | tee -a $log
-	echo -e " 所在区域               : ${SKYBLUE}$region${PLAIN}" | tee -a $log
+	echo -e " ASN & ISP           : ${SKYBLUE}$asn, $isp${PLAIN}" | tee -a $log
+	echo -e " 机构                : ${GREEN}$org${PLAIN}" | tee -a $log
+	echo -e " 地理位置            : ${SKYBLUE}$city, ${GREEN}$country / $countryCode${PLAIN}" | tee -a $log
+	echo -e " 所在区域          : ${SKYBLUE}$region${PLAIN}" | tee -a $log
 
 	rm -rf ip_info.py
 }
@@ -400,10 +400,10 @@ ip_info4(){
 		city=${region}
 	fi
 
-	echo -e " ASN & ISP            : ${SKYBLUE}$asn, $isp${PLAIN}" | tee -a $log
-	echo -e " 机构         : ${YELLOW}$org${PLAIN}" | tee -a $log
-	echo -e " 地理位置             : ${SKYBLUE}$city, ${YELLOW}$country / $countryCode${PLAIN}" | tee -a $log
-	echo -e " 所在区域               : ${SKYBLUE}$region${PLAIN}" | tee -a $log
+	echo -e " ASN & ISP           : ${SKYBLUE}$asn, $isp${PLAIN}" | tee -a $log
+	echo -e " 机构                : ${YELLOW}$org${PLAIN}" | tee -a $log
+	echo -e " 地理位置            : ${SKYBLUE}$city, ${YELLOW}$country / $countryCode${PLAIN}" | tee -a $log
+	echo -e " 所在区域          : ${SKYBLUE}$region${PLAIN}" | tee -a $log
 
 	rm -rf tools.py
 	rm -rf ip_json.json
