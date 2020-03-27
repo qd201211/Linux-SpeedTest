@@ -20,7 +20,7 @@ about() {
 	echo ""
 	echo " ========================================================= "
 	echo " \                 Superbench.sh  测试脚本               / "
-	echo " \         系统基础信息, I/O 测试 以及 网络速度测试       / "
+	echo " \         系统基础信息, I/O 测试 以及 网络速度测试      / "
 	echo " \                   v1.0.1 (27 Mar 2020)                / "
 	echo " \                   代码由 Oldking 编写                 / "
 	echo " \              修改以及汉化由 qd201211 完成             / "
@@ -145,7 +145,7 @@ benchinit() {
 
 	# install speedtest-cli
 	if  [ ! -e 'speedtest.py' ]; then
-		echo " Installing Speedtest-cli ..."
+		echo " 正在安装 Speedtest-cli ..."
 		wget --no-check-certificate https://raw.github.com/sivel/speedtest-cli/master/speedtest.py > /dev/null 2>&1
 	fi
 	chmod a+rx speedtest.py
@@ -153,14 +153,14 @@ benchinit() {
 
 	# install tools.py
 	if  [ ! -e 'tools.py' ]; then
-		echo " Installing tools.py ..."
+		echo " 正在安装 tools.py ..."
 		wget --no-check-certificate https://raw.githubusercontent.com/oooldking/script/master/tools.py > /dev/null 2>&1
 	fi
 	chmod a+rx tools.py
 
 	# install fast.com-cli
 	if  [ ! -e 'fast_com.py' ]; then
-		echo " Installing Fast.com-cli ..."
+		echo " 正在安装 Fast.com-cli ..."
 		wget --no-check-certificate https://raw.githubusercontent.com/sanderjo/fast.com/master/fast_com.py > /dev/null 2>&1
 		wget --no-check-certificate https://raw.githubusercontent.com/sanderjo/fast.com/master/fast_com_example_usage.py > /dev/null 2>&1
 	fi
