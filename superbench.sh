@@ -214,10 +214,10 @@ speed_test(){
 	        local reupload=$(echo "$temp" | awk -F ':' '/Upload/{print $2}')
 	        local relatency=$(echo "$temp" | awk -F ':' '/Hosted/{print $2}')
 	        #local relatency=$(pingtest $3)
-	        temp=$(echo "$relatency" | awk -F '.' '{print $1}')
-        	if [[ ${temp} -gt 50 ]]; then
-            	relatency=" (*)"${relatency}
-        	fi
+	        #temp=$(echo "$relatency" | awk -F '.' '{print $1}')
+        	#if [[ ${temp} -gt 1000 ]]; then
+            	relatency=" - "
+        	#fi
 	        local nodeName=$2
 
 	        temp=$(echo "${REDownload}" | awk -F ' ' '{print $1}')
