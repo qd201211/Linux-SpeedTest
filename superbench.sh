@@ -231,7 +231,7 @@ speed_test(){
 }
 
 print_speedtest() { 
-	printf "%-18s%-18s%-20s%-12s\n" " 节点名称" "     上传速度  " "         下载速度   "         "         连接延迟 " | tee -a $log
+	printf "%-18s%-18s%-20s%-12s\n" " 节点名称" "     上传速度  " "         下载速度   "         "        连接延迟 " | tee -a $log
     speed_test '' '测速-官方  XG   '
     speed_fast_com
     speed_test '27377' '北京-电信  5G   '
@@ -272,7 +272,7 @@ speed_fast_com() {
 	        local REDownload="$temp2 Mbit/s"
 	        local reupload="0.00 Mbit/s"
 	        local relatency="-"
-	        local nodeName="测速-官方  XG   "
+	        local nodeName="测速-官方  XG   |"
 
 	        printf "${YELLOW}%-18s${GREEN}%-18s${RED}%-20s${SKYBLUE}%-12s${PLAIN}\n" " ${nodeName}" "${reupload}" "${REDownload}" "${relatency}" | tee -a $log
 		else
