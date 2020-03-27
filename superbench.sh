@@ -352,9 +352,9 @@ ip_info2(){
 	region=$(curl -s https://ipapi.co/region/)
 
 	echo -e " ASN & ISP            : ${SKYBLUE}$asn${PLAIN}" | tee -a $log
-	echo -e " Organization         : ${SKYBLUE}$org${PLAIN}" | tee -a $log
-	echo -e " Location             : ${SKYBLUE}$city, ${GREEN}$country / $countryCode${PLAIN}" | tee -a $log
-	echo -e " Region               : ${SKYBLUE}$region${PLAIN}" | tee -a $log
+	echo -e " 机构                 : ${SKYBLUE}$org${PLAIN}" | tee -a $log
+	echo -e " 地理位置             : ${SKYBLUE}$city, ${GREEN}$country / $countryCode${PLAIN}" | tee -a $log
+	echo -e " 所在区域             : ${SKYBLUE}$region${PLAIN}" | tee -a $log
 }
 
 ip_info3(){
@@ -508,13 +508,13 @@ print_io() {
 	fi
 
 	if [[ $writemb != "1" ]]; then
-		echo -n " I/O Speed( $writemb_size )   : " | tee -a $log
+		echo -n " I/O 测速( $writemb_size )   : " | tee -a $log
 		io1=$( io_test $writemb )
 		echo -e "${YELLOW}$io1${PLAIN}" | tee -a $log
-		echo -n " I/O Speed( $writemb_size )   : " | tee -a $log
+		echo -n " I/O 测速( $writemb_size )   : " | tee -a $log
 		io2=$( io_test $writemb )
 		echo -e "${YELLOW}$io2${PLAIN}" | tee -a $log
-		echo -n " I/O Speed( $writemb_size )   : " | tee -a $log
+		echo -n " I/O 测速( $writemb_size )   : " | tee -a $log
 		io3=$( io_test $writemb )
 		echo -e "${YELLOW}$io3${PLAIN}" | tee -a $log
 		ioraw1=$( echo $io1 | awk 'NR==1 {print $1}' )
@@ -525,24 +525,24 @@ print_io() {
 		[ "`echo $io3 | awk 'NR==1 {print $2}'`" == "GB/s" ] && ioraw3=$( awk 'BEGIN{print '$ioraw3' * 1024}' )
 		ioall=$( awk 'BEGIN{print '$ioraw1' + '$ioraw2' + '$ioraw3'}' )
 		ioavg=$( awk 'BEGIN{printf "%.1f", '$ioall' / 3}' )
-		echo -e " Average I/O Speed    : ${YELLOW}$ioavg MB/s${PLAIN}" | tee -a $log
+		echo -e " 平均 I/O 速度        : ${YELLOW}$ioavg MB/s${PLAIN}" | tee -a $log
 	else
 		echo -e " ${RED}Not enough space!${PLAIN}"
 	fi
 }
 
 print_system_info() {
-	echo -e " CPU Model            : ${SKYBLUE}$cname${PLAIN}" | tee -a $log
-	echo -e " CPU Cores            : ${YELLOW}$cores Cores ${SKYBLUE}$freq MHz $arch${PLAIN}" | tee -a $log
-	echo -e " CPU Cache            : ${SKYBLUE}$corescache ${PLAIN}" | tee -a $log
-	echo -e " OS                   : ${SKYBLUE}$opsy ($lbit Bit) ${YELLOW}$virtual${PLAIN}" | tee -a $log
-	echo -e " Kernel               : ${SKYBLUE}$kern${PLAIN}" | tee -a $log
-	echo -e " Total Space          : ${SKYBLUE}$disk_used_size GB / ${YELLOW}$disk_total_size GB ${PLAIN}" | tee -a $log
-	echo -e " Total RAM            : ${SKYBLUE}$uram MB / ${YELLOW}$tram MB ${SKYBLUE}($bram MB Buff)${PLAIN}" | tee -a $log
-	echo -e " Total SWAP           : ${SKYBLUE}$uswap MB / $swap MB${PLAIN}" | tee -a $log
-	echo -e " Uptime               : ${SKYBLUE}$up${PLAIN}" | tee -a $log
-	echo -e " Load Average         : ${SKYBLUE}$load${PLAIN}" | tee -a $log
-	echo -e " TCP CC               : ${YELLOW}$tcpctrl${PLAIN}" | tee -a $log
+	echo -e " 虚拟架构            : ${SKYBLUE}$cname${PLAIN}" | tee -a $log
+	echo -e " CPU 核心            : ${YELLOW}$cores Cores ${SKYBLUE}$freq MHz $arch${PLAIN}" | tee -a $log
+	echo -e " CPU 缓存            : ${SKYBLUE}$corescache ${PLAIN}" | tee -a $log
+	echo -e " 操作系统            : ${SKYBLUE}$opsy ($lbit Bit) ${YELLOW}$virtual${PLAIN}" | tee -a $log
+	echo -e " 系统内核            : ${SKYBLUE}$kern${PLAIN}" | tee -a $log
+	echo -e " 硬盘空间            : ${SKYBLUE}$disk_used_size GB / ${YELLOW}$disk_total_size GB ${PLAIN}" | tee -a $log
+	echo -e " 系统内存            : ${SKYBLUE}$uram MB / ${YELLOW}$tram MB ${SKYBLUE}($bram MB Buff)${PLAIN}" | tee -a $log
+	echo -e " SWAP 分配           : ${SKYBLUE}$uswap MB / $swap MB${PLAIN}" | tee -a $log
+	echo -e " 系统已运行          : ${SKYBLUE}$up${PLAIN}" | tee -a $log
+	echo -e " 系统负载            : ${SKYBLUE}$load${PLAIN}" | tee -a $log
+	echo -e " TCP CC              : ${YELLOW}$tcpctrl${PLAIN}" | tee -a $log
 }
 
 print_end_time() {
