@@ -231,23 +231,23 @@ speed_test(){
 }
 
 print_speedtest() {
-	printf "%-18s%-18s%-20s%-12s\n" " Node Name" "Upload Speed" "Download Speed" "Latency" | tee -a $log
+	printf "%-18s%-18s%-20s%-12s\n" " 节点名称" "上传速度" "下载速度" "连接延迟" | tee -a $log
     speed_test '' 'Speedtest.net'
     speed_fast_com
-    speed_test '27377' '北京  电信 5G   '
-    speed_test '26352' '南京  电信 5G   '
-    speed_test '17145' '合肥  电信 5G   '
-	speed_test '27594' '广州  电信 5G   '
-	speed_test '26180' '济南  联通 5G   '
-	speed_test '27154' '天津  联通 5G   '
-	speed_test '24447' '上海  联通 5G   '
-	speed_test '26678' '广州  联通 5G   '
-	speed_test '27100' '青岛  移动 5G   '
-	speed_test '17184' '天津  移动 5G   '
-	speed_test '26850' '无锡  移动 5G   '
-	speed_test '27249' '南京  移动 5G   '
-	speed_test '26404' '合肥  移动 5G   '
-	speed_test '28491' '长沙  移动 5G   '
+    speed_test '27377' '北京-电信  5G   '
+    speed_test '26352' '南京-电信  5G   '
+    speed_test '17145' '合肥-电信  5G   '
+	speed_test '27594' '广州-电信  5G   '
+	speed_test '26180' '济南-联通  5G   '
+	speed_test '27154' '天津-联通  5G   '
+	speed_test '24447' '上海-联通  5G   '
+	speed_test '26678' '广州-联通  5G   '
+	speed_test '27100' '青岛-移动  5G   '
+	speed_test '17184' '天津-移动  5G   '
+	speed_test '26850' '无锡-移动  5G   '
+	speed_test '27249' '南京-移动  5G   '
+	speed_test '26404' '合肥-移动  5G   '
+	speed_test '28491' '长沙-移动  5G   '
 	 
 	rm -rf speedtest.py
 }
