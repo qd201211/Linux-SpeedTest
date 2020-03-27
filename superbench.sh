@@ -216,7 +216,7 @@ speed_test(){
 	        local relatency=$(pingtest $3)
 	        temp=$(echo "$relatency" | awk -F '.' '{print $1}')
         	if [[ ${temp} -gt 1000 ]]; then
-            	relatency=" - "
+            	relatency=" 0.000 ms "
         	fi
 	        local nodeName=$2
 
@@ -253,12 +253,12 @@ print_speedtest() {
 }
 
 print_speedtest_fast() {
-	printf "%-18s%-18s%-20s%-12s\n" " Node Name" "Upload Speed" "Download Speed" "Latency" | tee -a $log
-    speed_test '' 'Speedtest.net'
+	printf "%-18s%-18s%-20s%-12s\n" " 节点名称" "     上传速度  " "        下载速度       "    "连接延迟 " | tee -a $log
+    speed_test '' '测速-官方  XG   '
     speed_fast_com
-    speed_test '27377' 'Beijing 5G   CT'
-	speed_test '24447' 'ShangHai 5G  CU'
-	speed_test '27249' 'Nanjing 5G   CM'
+    speed_test '27377' '北京-电信  5G   '
+	speed_test '26180' '济南-联通  5G   '
+	speed_test '27249' '南京-移动  5G   '
 	 
 	rm -rf speedtest.py
 }
@@ -271,8 +271,8 @@ speed_fast_com() {
 	        temp2=$(echo "$temp1" | awk -F ' ' '/Mbps/{print $1}')
 	        local REDownload="$temp2 Mbit/s"
 	        local reupload="0.00 Mbit/s"
-	        local relatency="-"
-	        local nodeName="测速-官方  XG   　"
+	        local relatency="0.000 ms"
+	        local nodeName="奈飞-官方  XG   　"
 
 	        printf "${YELLOW}%-18s${GREEN}%-18s${RED}%-20s${SKYBLUE}%-12s${PLAIN}\n" " ${nodeName}" "${reupload}" "${REDownload}" "${relatency}" | tee -a $log
 		else
