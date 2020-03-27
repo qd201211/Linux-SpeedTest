@@ -217,7 +217,7 @@ speed_test(){
 	        temp=$(echo "$relatency" | awk -F '.' '{print $1}')
         	if [[ ${temp} -gt 1000 ]]; then
             	relatency=" - "
-        	#fi
+        	fi
 	        local nodeName=$2
 
 	        temp=$(echo "${REDownload}" | awk -F ' ' '{print $1}')
