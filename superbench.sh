@@ -272,7 +272,7 @@ speed_fast_com() {
 	        local REDownload="$temp2 Mbit/s"
 	        local reupload="0.00 Mbit/s"
 	        local relatency="-"
-	        local nodeName="测速-官方  XG   |"
+	        local nodeName="测速-官方  XG   　"
 
 	        printf "${YELLOW}%-18s${GREEN}%-18s${RED}%-20s${SKYBLUE}%-12s${PLAIN}\n" " ${nodeName}" "${reupload}" "${REDownload}" "${relatency}" | tee -a $log
 		else
