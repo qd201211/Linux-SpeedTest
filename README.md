@@ -6,7 +6,7 @@
 <br>+粗略对脚本进行了汉化
 
 
-\<br>未学过编程，仅对能看懂的地方进行了小改动\<br>
+<br>未学过编程，仅对能看懂的地方进行了小改动\<br>
 
 
 此处感谢原作者的脚本，递上大佬github:https://github.com/oooldking/script
