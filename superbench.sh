@@ -337,9 +337,9 @@ ip_info(){
 	fi
 
 	echo -e " ASN & ISP            : ${SKYBLUE}$asn, $isp${PLAIN}" | tee -a $log
-	echo -e " Organization         : ${YELLOW}$org${PLAIN}" | tee -a $log
-	echo -e " Location             : ${SKYBLUE}$city, ${YELLOW}$country / $countryCode${PLAIN}" | tee -a $log
-	echo -e " Region               : ${SKYBLUE}$region${PLAIN}" | tee -a $log
+	echo -e " 机构         : ${YELLOW}$org${PLAIN}" | tee -a $log
+	echo -e " 地理位置             : ${SKYBLUE}$city, ${YELLOW}$country / $countryCode${PLAIN}" | tee -a $log
+	echo -e " 所在区域             : ${SKYBLUE}$region${PLAIN}" | tee -a $log
 }
 
 ip_info2(){
@@ -369,9 +369,9 @@ ip_info3(){
 	region=$(python ip_info.py regionName)
 
 	echo -e " ASN & ISP            : ${SKYBLUE}$asn, $isp${PLAIN}" | tee -a $log
-	echo -e " Organization         : ${GREEN}$org${PLAIN}" | tee -a $log
-	echo -e " Location             : ${SKYBLUE}$city, ${GREEN}$country / $countryCode${PLAIN}" | tee -a $log
-	echo -e " Region               : ${SKYBLUE}$region${PLAIN}" | tee -a $log
+	echo -e " 机构                 : ${GREEN}$org${PLAIN}" | tee -a $log
+	echo -e " 地理位置             : ${SKYBLUE}$city, ${GREEN}$country / $countryCode${PLAIN}" | tee -a $log
+	echo -e " 所在区域               : ${SKYBLUE}$region${PLAIN}" | tee -a $log
 
 	rm -rf ip_info.py
 }
@@ -401,9 +401,9 @@ ip_info4(){
 	fi
 
 	echo -e " ASN & ISP            : ${SKYBLUE}$asn, $isp${PLAIN}" | tee -a $log
-	echo -e " Organization         : ${YELLOW}$org${PLAIN}" | tee -a $log
-	echo -e " Location             : ${SKYBLUE}$city, ${YELLOW}$country / $countryCode${PLAIN}" | tee -a $log
-	echo -e " Region               : ${SKYBLUE}$region${PLAIN}" | tee -a $log
+	echo -e " 机构         : ${YELLOW}$org${PLAIN}" | tee -a $log
+	echo -e " 地理位置             : ${SKYBLUE}$city, ${YELLOW}$country / $countryCode${PLAIN}" | tee -a $log
+	echo -e " 所在区域               : ${SKYBLUE}$region${PLAIN}" | tee -a $log
 
 	rm -rf tools.py
 	rm -rf ip_json.json
@@ -525,7 +525,7 @@ print_io() {
 		[ "`echo $io3 | awk 'NR==1 {print $2}'`" == "GB/s" ] && ioraw3=$( awk 'BEGIN{print '$ioraw3' * 1024}' )
 		ioall=$( awk 'BEGIN{print '$ioraw1' + '$ioraw2' + '$ioraw3'}' )
 		ioavg=$( awk 'BEGIN{printf "%.1f", '$ioall' / 3}' )
-		echo -e " 平均 I/O 速度        : ${YELLOW}$ioavg MB/s${PLAIN}" | tee -a $log
+		echo -e " 平均 I/O 速度       : ${YELLOW}$ioavg MB/s${PLAIN}" | tee -a $log
 	else
 		echo -e " ${RED}Not enough space!${PLAIN}"
 	fi
@@ -616,7 +616,7 @@ sharetest() {
 	case $1 in
 	'ubuntu')
 		share_link="https://paste.ubuntu.com".$( curl -v --data-urlencode "content@$log_up" -d "poster=superbench.sh" -d "syntax=text" "https://paste.ubuntu.com" 2>&1 | \
-			grep "Location" | awk '{print $3}' );;
+			grep "地理位置" | awk '{print $3}' );;
 	'haste' )
 		share_link=$( curl -X POST -s -d "$(cat $log)" https://hastebin.com/documents | awk -F '"' '{print "https://hastebin.com/"$4}' );;
 	'clbin' )
