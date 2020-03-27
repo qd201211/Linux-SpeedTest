@@ -23,7 +23,7 @@ about() {
 	echo " \       Basic system info, I/O test and speedtest       / "
 	echo " \                   v1.0.1 (27 Mar 2020)                / "
 	echo " \                   Created by Oldking                  / "
-	echo " \                   rebuild by qd201211                / "
+	echo " \                   rebuild by qd201211                 / "
 	echo " ========================================================= "
 	echo ""
 	echo " Intro: https://www.oldking.net/350.html"
@@ -231,7 +231,7 @@ speed_test(){
 }
 
 print_speedtest() { 
-	printf "%-18s%-18s%-20s%-12s\n" " 节点名称" "     上传速度  " "         下载速度  "   "       连接延迟" | tee -a $log
+	printf "%-18s%-18s%-20s%-12s\n" " 节点名称" "     上传速度  " "         下载速度  "  "     连接延迟" | tee -a $log
     speed_test '' 'Speedtest.net'
     speed_fast_com
     speed_test '27377' '北京-电信  5G   '
