@@ -310,7 +310,7 @@ power_time() {
 install_smart() {
 	# install smartctl
 	if  [ ! -e '/usr/sbin/smartctl' ]; then
-		echo "Installing Smartctl ..."
+		echo "正在安装 Smartctl ..."
 	    if [ "${release}" == "centos" ]; then
 	    	yum update > /dev/null 2>&1
 	        yum -y install smartmontools > /dev/null 2>&1
