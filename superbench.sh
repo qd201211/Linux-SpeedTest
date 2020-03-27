@@ -215,8 +215,8 @@ speed_test(){
 	        local relatency=$(echo "$temp" | awk -F ':' '/Hosted/{print $2}')
 	        #local relatency=$(pingtest $3)
 	        temp=$(echo "$relatency" | awk -F '.' '{print $1}')
-        	if [[ ${temp} -gt 1000 ]]; then
-            	relatency=" 0.000 ms "
+        	if [[ ${temp} -gt 50 ]]; then
+            	relatency=" (*)"${relatency}
         	fi
 	        local nodeName=$2
 
