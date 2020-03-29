@@ -551,9 +551,9 @@ print_end_time() {
 	if [[ $time -gt 60 ]]; then
 		min=$(expr $time / 60)
 		sec=$(expr $time % 60)
-		echo -ne " 消耗时间  : ${min} min ${sec} sec" | tee -a $log
+		echo -ne " 消耗时间    : ${min} min ${sec} sec" | tee -a $log
 	else
-		echo -ne " 消耗时间  : ${time} sec" | tee -a $log
+		echo -ne " 消耗时间    : ${time} sec" | tee -a $log
 	fi
 	#echo -ne "\n Current time : "
 	#echo $(date +%Y-%m-%d" "%H:%M:%S)
@@ -568,7 +568,7 @@ print_end_time() {
 	fi
 	echo " 当前时间    : $bj_time GMT+8" | tee -a $log
 	#echo " Finished!"
-	echo " 测试结果保存到   : $log"
+	echo " 结果保存到  : $log"
 }
 
 get_system_info() {
