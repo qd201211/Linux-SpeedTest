@@ -409,7 +409,7 @@ print_io() {
 }
 
 print_system_info() {
-	echo -e " 平均 I/O 速度       : ${SKYBLUE}$cname${PLAIN}" | tee -a $log
+	echo -e " 虚拟架构            : ${SKYBLUE}$cname${PLAIN}" | tee -a $log
 	echo -e " CPU 核心            : ${YELLOW}$cores Cores ${SKYBLUE}$freq MHz $arch${PLAIN}" | tee -a $log
 	echo -e " CPU 缓存            : ${SKYBLUE}$corescache ${PLAIN}" | tee -a $log
 	echo -e " 操作系统            : ${SKYBLUE}$opsy ($lbit Bit) ${YELLOW}$virtual${PLAIN}" | tee -a $log
