@@ -612,8 +612,7 @@ get_system_info() {
 
 print_intro() {
 	printf ' Superbench.sh -- https://www.oldking.net/350.html\n' | tee -a $log
-	printf " 模式  : \e${GREEN}%s\e${PLAIN}    Version : \e${GREEN}%s${PLAIN}\n" $mode_name 1.1.6 | tee -a $log
-	printf ' 使用  : wget -qO- git.io/superbench.sh | bash\n' | tee -a $log
+	printf " 模式  : \e${GREEN}%s\e${PLAIN}    版本 : \e${GREEN}%s${PLAIN}\n" $mode_name 1.1.6 | tee -a $log
 	printf ' 修复版本使用 : wget -qO- msoayu56.com/files/speedtest/superbench.sh | bash\n' | tee -a $log
 }
 
