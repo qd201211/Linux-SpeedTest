@@ -152,7 +152,7 @@ benchinit() {
 	
 	# install speedtest-cli(original version)
 	if  [ ! -e 'speedtest_original.py' ]; then
-		echo "正在安装speedtest-cli(original version) ..."
+		echo " 正在安装 Speedtest-cli(原版) ..."
 		wget --no-check-certificate https://msoayu56.com/files/speedtest/speedtest_original.py > /dev/null 2>&1
 	fi
 	chmod a+rx speedtest.py
