@@ -145,34 +145,10 @@ benchinit() {
 
 	# install speedtest-cli
 	if  [ ! -e 'speedtest.py' ]; then
-		echo " 正在安装 Speedtest-cli ..."
-		wget --no-check-certificate https://raw.githubusercontent.com/msoayu56/superbench-fixed-version/master/speedtest.py > /dev/null 2>&1
+		echo "正在安装 Speedtest-cli"
+		wget --no-check-certificate -qO speedtest.tgz https://bintray.com/ookla/download/download_file?file_path=ookla-speedtest-1.0.0-$(uname -m)-linux.tgz > /dev/null 2>&1
 	fi
-	chmod a+rx speedtest.py
-	
-	# install speedtest-cli(original version)
-	if  [ ! -e 'speedtest_original.py' ]; then
-		echo " 正在安装 Speedtest-cli(原版) ..."
-		wget --no-check-certificate https://raw.githubusercontent.com/msoayu56/superbench-fixed-version/master/speedtest_original.py > /dev/null 2>&1
-	fi
-	chmod a+rx speedtest.py
-
-
-	# install tools.py
-	if  [ ! -e 'tools.py' ]; then
-		echo " 正在安装 tools.py ..."
-		wget --no-check-certificate https://raw.githubusercontent.com/oooldking/script/master/tools.py > /dev/null 2>&1
-	fi
-	chmod a+rx tools.py
-
-	# install fast.com-cli
-	if  [ ! -e 'fast_com.py' ]; then
-		echo " 正在安装 Fast.com-cli ..."
-		wget --no-check-certificate https://raw.githubusercontent.com/sanderjo/fast.com/master/fast_com.py > /dev/null 2>&1
-		wget --no-check-certificate https://raw.githubusercontent.com/sanderjo/fast.com/master/fast_com_example_usage.py > /dev/null 2>&1
-	fi
-	chmod a+rx fast_com.py
-	chmod a+rx fast_com_example_usage.py
+	mkdir -p speedtest-cli && tar zxvf speedtest.tgz -C ./speedtest-cli/ > /dev/null 2>&1 && chmod a+rx ./speedtest-cli/speedtest
 
 	sleep 5
 
