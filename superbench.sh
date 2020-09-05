@@ -31,6 +31,14 @@ about() {
 	echo ""
 }
 
+preinfo() {
+	echo "                   Superbench 服务器性能测试                          "
+	echo "       bash <(curl -Lso- https://git.io/superbench)"
+	echo "       全部节点列表:  https://git.io/superspeedList"
+	echo "       节点更新: 2020/04/09  | 脚本更新: 2020/09/06"
+	echo "----------------------------------------------------------------------"
+}
+
 cancel() {
 	echo ""
 	next;
@@ -160,7 +168,7 @@ next() {
 }
 
 speed_test(){
-	speedLog="./speedtest.log"
+	speedLog="./benchmark.log"
 	true > $speedLog
 		speedtest-cli/speedtest -p no -s $1 --accept-license > $speedLog 2>&1
 		is_upload=$(cat $speedLog | grep 'Upload')
@@ -763,7 +771,7 @@ get_system_info() {
 
 sharetest() {
 	echo " 分享测试结果:" | tee -a $log
-	echo " $result_speed" | tee -a $log
+	echo " 路 $result_speed" | tee -a $log
 	log_preupload
 	case $1 in
 	'ubuntu')
@@ -778,7 +786,7 @@ sharetest() {
 	esac
 
 	# print result info
-	echo "$share_link" | tee -a $log
+	echo " 路 $share_link" | tee -a $log
 	next
 	echo ""
 	rm -f $log_up
@@ -824,6 +832,7 @@ bench_all(){
 	benchinit;
 	clear
 	next;
+	preinfo
 	get_system_info;
 	print_system_info;
 	ip_info4;
