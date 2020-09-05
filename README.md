@@ -5,7 +5,7 @@
            修复版作者博客：https://msoayu56.com/310/
 
 2020/9/6   更换spendtestcli地址，修复无法测速的问题
-           由朋友推荐发现https://git.io/superspeed测速脚本，感觉十分好用
+           由朋友推荐发现https://git.io/superspeed 测速脚本，感觉十分好用
            先已将大佬脚本合并在此，既可以查看基础信息也可以进行区分测速
            删除快捷测速模式
            修改界面样式
