@@ -21,7 +21,7 @@ about() {
 	echo " ========================================================= "
 	echo " \                 Superbench.sh  测试脚本               / "
 	echo " \         系统基础信息, I/O 测试 以及 网络速度测试      / "
-	echo " \                   v2.0.0 (6 Sep 2020)                / "
+	echo " \                   v2.0.0 (6 Sep 2020)                 / "
 	echo " \                   代码由 Oldking 编写                 / "
 	echo " \              修改以及汉化由 qd201211 完成             / "
 	echo " ========================================================= "
@@ -37,6 +37,7 @@ cancel() {
 	echo " Abort ..."
 	echo " Cleanup ..."
 	cleanup;
+	rm -rf speedtest*
 	echo " Done"
 	exit
 }
@@ -136,7 +137,7 @@ benchinit() {
 	#fi
 	# install tools.py
 	if  [ ! -e 'tools.py' ]; then
-		echo " 正在安装 tools.py ..."
+		echo "正在安装 tools.py ..."
 		wget --no-check-certificate https://raw.githubusercontent.com/oooldking/script/master/tools.py > /dev/null 2>&1
 	fi
 	chmod a+rx tools.py
@@ -828,8 +829,8 @@ bench_all(){
 	ip_info4;
 	next;
 	print_io;
-	next;
 	speed_test;
+	next;
 	selecttest;
 	runtest;
 	next;
