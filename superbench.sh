@@ -834,7 +834,6 @@ bench_all(){
 	speed_test;
 	selecttest;
 	runtest;
-	rm -rf speedtest*
 	next;
 	print_end_time;
 	next;
