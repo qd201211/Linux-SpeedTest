@@ -150,6 +150,23 @@ benchinit() {
 	fi
 	mkdir -p speedtest-cli && tar zxvf speedtest.tgz -C ./speedtest-cli/ > /dev/null 2>&1 && chmod a+rx ./speedtest-cli/speedtest
 
+	# install tools.py
+	if  [ ! -e 'tools.py' ]; then
+		echo " 正在安装 tools.py ..."
+		wget --no-check-certificate https://raw.githubusercontent.com/oooldking/script/master/tools.py > /dev/null 2>&1
+	fi
+	chmod a+rx tools.py
+
+	# install fast.com-cli
+	if  [ ! -e 'fast_com.py' ]; then
+		echo " 正在安装 Fast.com-cli ..."
+		wget --no-check-certificate https://raw.githubusercontent.com/sanderjo/fast.com/master/fast_com.py > /dev/null 2>&1
+		wget --no-check-certificate https://raw.githubusercontent.com/sanderjo/fast.com/master/fast_com_example_usage.py > /dev/null 2>&1
+	fi
+	chmod a+rx fast_com.py
+	chmod a+rx fast_com_example_usage.py
+
+	
 	sleep 5
 
 	# start
