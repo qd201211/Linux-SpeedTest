@@ -763,7 +763,7 @@ get_system_info() {
 
 sharetest() {
 	echo " 分享测试结果:" | tee -a $log
-	echo " 路 $result_speed" | tee -a $log
+	echo " $result_speed" | tee -a $log
 	log_preupload
 	case $1 in
 	'ubuntu')
@@ -778,7 +778,7 @@ sharetest() {
 	esac
 
 	# print result info
-	echo " 路 $share_link" | tee -a $log
+	echo "$share_link" | tee -a $log
 	next
 	echo ""
 	rm -f $log_up
