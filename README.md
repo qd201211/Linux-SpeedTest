@@ -1,4 +1,3 @@
-# Linux-SpeedTest
 # 一键测速脚本使用方法：
 ```bash <(curl -Lso- https://git.io/superbench)```
 
