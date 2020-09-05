@@ -1,25 +1,21 @@
 # Linux-SpeedTest
-2020/4/10  基于修复版进行汉化，解决测速虚高的问题
+# 一键测速脚本使用方法：
+```bash <(curl -Lso- https://git.io/superbench)```
+
+<br>2020/4/10  基于修复版进行汉化，解决测速虚高的问题
            修复版作者博客：https://msoayu56.com/310/
 
-
-自定义测速脚本，用于对国外vps配置以及网络测试
-<br>
-+山东联通济南节点\
-<br>+山东移动青岛节点\
-<br>+粗略对脚本进行了汉化
-
+2020/9/6   更换spendtestcli地址，修复无法测速的问题
+           由朋友推荐发现https://git.io/superspeed测速脚本，感觉十分好用
+           先已将大佬脚本合并在此，既可以查看基础信息也可以进行区分测速
+           删除快捷测速模式
+           修改界面样式
+           更改版本号为2.0
 
 <br>未学过编程，仅对能看懂的地方进行了小改动\
 
 
 <br>此处感谢原作者的脚本，递上大佬github:https://github.com/oooldking/script
 
-
-一键测速脚本使用方法：
-
-```wget -qO- --no-check-certificate https://raw.githubusercontent.com/qd201211/Linux-SpeedTest/master/superbench.sh | bash```
-
-修改的时候突然发现作者还有一个快速测试模式，默认就有三个节点：
-
-```wget -qO- --no-check-certificate https://raw.githubusercontent.com/qd201211/Linux-SpeedTest/master/superbench.sh | bash -s fast```
+# 节点列表
+查看全部节点列表（更新日期：2020/04/09）https://git.io/superspeedList
